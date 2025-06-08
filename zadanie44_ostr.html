@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <script language="JavaScript">
+                let nazwisko = prompt("Podaj swoje nazwisko:");
+                let imie = prompt("Podaj swoje imię:");
+
+                let i_ost = nazwisko.substring(0, 3);
+                let koniec_petli_ost = (nazwisko.length % 4) + 10;
+                let wielkosc_liter_ost = (nazwisko.length % 3) + 40;
+
+                document.write("Ilość wykonania pętli = " + koniec_petli_ost + "<br>");
+                document.write("Wielkość liter = " + wielkosc_liter_ost + "px<br><br>");
+
+                for (let i_pierwsza_litera_nazwiska_ost = 1; i_pierwsza_litera_nazwiska_ost <= koniec_petli_ost; i_pierwsza_litera_nazwiska_ost++) {
+                    if (i_pierwsza_litera_nazwiska_ost % 2 !== 0) {
+                        document.write("<span style='font-size:" + wielkosc_liter_ost + "px'>" + nazwisko + "</span><br>");
+                    } else {
+                        document.write("<span style='font-size:" + wielkosc_liter_ost + "px'>" + imie + "</span><br>");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

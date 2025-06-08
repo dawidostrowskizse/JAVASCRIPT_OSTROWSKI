@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="font-family: monospace; color:purple; font-size:22px;">
+        <script language="JavaScript">
+            let nr_ost = 19;
+            let licznik_linii = 0;
+            for(let i_ost = nr_ost; i_ost <= nr_ost + 15; i_ost++) {
+                document.write("I=" + i_ost + "<br>");
+                document.write("pierw_2(" + i_ost + ")=" + Math.sqrt(i_ost).toFixed(2) + "<br>");
+                document.write("pierw_4(" + i_ost + ")=" + Math.sqrt(Math.sqrt(i_ost)).toFixed(2) + "<br>");
+                licznik_linii++;
+                if(licznik_linii % 3 === 0) {
+                    alert("Kliknij OK, aby zobaczyć kolejne 3 linie.");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

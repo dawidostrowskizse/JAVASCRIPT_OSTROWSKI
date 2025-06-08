@@ -1,0 +1,43 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="kod" cols="80" rows="25" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div>
+        <script language="JavaScript">
+            let a_ost, b_ost, c_ost;
+            do {
+                a_ost = parseFloat(prompt("Podaj bok a:"));
+                b_ost = parseFloat(prompt("Podaj bok b:"));
+                c_ost = parseFloat(prompt("Podaj bok c:"));
+            } while (
+                !(a_ost > 0 && b_ost > 0 && c_ost > 0 &&
+                a_ost + b_ost > c_ost &&
+                a_ost + c_ost > b_ost &&
+                b_ost + c_ost > a_ost)
+            );
+            document.write("Boki tworzą trójkąt: a=" + a_ost + " b=" + b_ost + " c=" + c_ost);
+        </script>
+    </div>
+</body>
+</html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

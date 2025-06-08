@@ -1,0 +1,44 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="kod" cols="80" rows="25" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <button onclick="obliczSume()">Oblicz sumę szeregu harmonicznego</button>
+  <p id="wynik"></p>
+
+  <script>
+    function obliczSume() {
+      let suma_ost = 0;
+      let i_ost = 1;
+
+      while (i_ost <= 1000000) {
+        suma_ost += 1 / i_ost;
+        i_ost++;
+      }
+
+      document.getElementById("wynik").textContent = "Suma szeregu harmonicznego od 1 do 1 000 000 wynosi: " + suma_ost;
+    }
+  </script>
+</body>
+</html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
