@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przykład HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <h1>Wczytanie końca pętli z użyciem instrukcji-okienka prompt</h1>
-    <p>Przykład użycia instrukcji-okienka prompt do wczytania końca pętli:</p>
-    <pre>
-        <code>
-        let koniec_petli = prompt("Wpisz tekst kończący pętlę:");
-        for (let i_pierwsza_litera_nazwiska = 0; i_pierwsza_litera_nazwiska &lt; 10; i_pierwsza_litera_nazwiska++) {
-            if (i_pierwsza_litera_nazwiska == koniec_petli) {
-                break;
-            }
-            console.log("Przykładowy tekst: " + i_pierwsza_litera_nazwiska);
-        }
-        </code>
-    </pre>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div style="color:red; font-size:50px;">
+            <script language="JavaScript">
+                let koniec_petli_ost = parseInt(prompt("Podaj liczbę końcową:"));
 
-    <h2>Zapewnienie wyświetlania polskich liter w standardzie UTF-8</h2>
-    <p>W powyższym przykładzie użyto deklaracji <code>&lt;meta charset="UTF-8"&gt;</code> w sekcji <code>&lt;head&gt;</code>, aby zapewnić wyświetlanie polskich liter w standardzie UTF-8.</p>
-</body>
+                for(i_ost = 2; i_ost <= koniec_petli_ost; i_ost++) {
+                    if(i_ost % 2 === 0) {
+                        document.write("Wyświetlam " + i_ost + " raz" + " Ostrowski<br>");
+                    }
+                }
+            </script>
+        </div>
+    </body>
 </html>
