@@ -1,89 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informacje o pętlach</title>
-    <style>
-        pre {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .scheme {
-            margin: 20px 0;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8" />
 </head>
 <body>
-    <h1>Informacje o pętlach</h1>
 
-    <h2>Pętla for</h2>
-    <p>Nazwa pętli: Pętla for</p>
-    <p>Konstrukcja:</p>
-    <pre>
-        for (inicjalizacja; warunek; aktualizacja) {
-            // kod do wykonania
-        }
-    </pre>
-    <p>Opis:</p>
-    <p>Pętla for jest używana do wykonywania bloku kodu określoną liczbę razy. Inicjalizacja ustala początkową wartość zmiennej sterującej, warunek określa, kiedy pętla powinna się zakończyć, a aktualizacja zmienia wartość zmiennej sterującej po każdej iteracji.</p>
-    <div class="scheme">
-        <img src="https://i.imgur.com/1234567.png" alt="Schemat blokowy pętli for">
-    </div>
+<button onclick="pokazPetle()">Wyświetl informacje o pętlach</button>
+<div id="info"></div>
 
-    <h2>Pętla while</h2>
-    <p>Nazwa pętli: Pętla while</p>
-    <p>Konstrukcja:</p>
-    <pre>
-        while (warunek) {
-            // kod do wykonania
-        }
-    </pre>
-    <p>Opis:</p>
-    <p>Pętla while jest używana do wykonywania bloku kodu, dopóki warunek jest spełniony. Warunek jest sprawdzany na początku każdej iteracji.</p>
-    <div class="scheme">
-        <img src="https://i.imgur.com/7654321.png" alt="Schemat blokowy pętli while">
-    </div>
-
-    <h2>Pętla do-while</h2>
-    <p>Nazwa pętli: Pętla do-while</p>
-    <p>Konstrukcja:</p>
-    <pre>
-        do {
-            // kod do wykonania
-        } while (warunek);
-    </pre>
-    <p>Opis:</p>
-    <p>Pętla do-while jest podobna do pętli while, ale warunek jest sprawdzany na końcu każdej iteracji. Oznacza to, że blok kodu jest wykonywany przynajmniej raz, nawet jeśli warunek jest fałszywy od początku.</p>
-    <div class="scheme">
-        <img src="https://i.imgur.com/8901234.png" alt="Schemat blokowy pętli do-while">
-    </div>
-
-    <p>Poniżej znajdują się przykłady użycia tych pętli w praktyce:</p>
-
-    <h2>Przykłady użycia pętli</h2>
-    <pre>
-        // Pętla for
-        for (let i = 0; i < 5; i++) {
-            console.log(i);
-        }
-
-        // Pętla while
-        let j = 0;
-        while (j < 5) {
-            console.log(j);
-            j++;
-        }
-
-        // Pętla do-while
-        let k = 0;
-        do {
-            console.log(k);
-            k++;
-        } while (k < 5);
-    </pre>
+<script>
+function pokazPetle() {
+    document.getElementById('info').innerHTML = `
+<div>
+  <h2>1) Pętla for</h2>
+  <b>Nazwa pętli:</b> Pętla for<br>
+  <b>Konstrukcja:</b>
+  <pre>
+for (zainicjowanie_zmiennej; warunek_kończący_wykonywanie_pętli; zmiana_zmiennej) {
+    kod który zostanie wykonany pewną ilość razy
+}
+  </pre>
+  <b>Opis:</b>
+  <p>Pętla for wykonuje blok kodu określoną liczbę razy. Zawiera inicjalizację zmiennej, warunek zakończenia oraz zmianę zmiennej w każdej iteracji.</p>
+</div>
+<div>
+  <h2>2) Pętla while (z kontrolowanym wejściem)</h2>
+  <b>Nazwa pętli:</b> Pętla while<br>
+  <b>Konstrukcja:</b>
+  <pre>
+while (wyrażenie_sprawdzające_zakończenie_pętli) {
+    ...fragment kodu który będzie powtarzany...
+}
+  </pre>
+  <b>Opis:</b>
+  <p>Pętla while najpierw sprawdza warunek, a następnie wykonuje blok kodu. Pętla może się nie wykonać, jeśli warunek jest fałszywy od początku.</p>
+</div>
+<div>
+  <h2>3) Pętla do while (z kontrolowanym wyjściem)</h2>
+  <b>Nazwa pętli:</b> Pętla do-while<br>
+  <b>Konstrukcja:</b>
+  <pre>
+do {
+    ...fragment kodu który będzie powtarzany...
+} while (warunek);
+  </pre>
+  <b>Opis:</b>
+  <p>Pętla do...while zawsze wykona przynajmniej jedną iterację, zanim sprawdzi warunek zakończenia.</p>
+</div>
+    `;
+}
+</script>
 
 </body>
 </html>
